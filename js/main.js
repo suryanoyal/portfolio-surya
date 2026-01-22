@@ -28,6 +28,7 @@ document.querySelectorAll(".tab").forEach(tab => {
 const overlay = document.getElementById("igOverlay");
 const igMedia = document.getElementById("igMedia");
 const igTitle = document.getElementById("igTitle");
+const igDescription = document.getElementById("igDescription"); // Select the description element
 
 document.querySelectorAll(".post").forEach(post => {
   post.onclick = () => {
@@ -46,7 +47,10 @@ document.querySelectorAll(".post").forEach(post => {
 
     igMedia.innerHTML = "";
     igMedia.appendChild(media);
+    
+    // Update Title and Description dynamically
     igTitle.innerText = post.dataset.title || "";
+    igDescription.innerText = post.dataset.description || "Instagram / Portfolio Content";
   };
 });
 
